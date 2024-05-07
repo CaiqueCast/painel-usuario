@@ -1,4 +1,5 @@
 const knex = require("../connection");
+// const path = require('path');
 
 const updateInformation = async (req, res) => {
   try {
@@ -24,6 +25,7 @@ const getInformation = async (req, res) => {
     const informations = await knex("usuarios");
     if (informations.length > 0) {
       return res.status(200).json(informations);
+      // return res.sendFile(path.join(__dirname, '../html/index.html'));
     }
     return informations;
 

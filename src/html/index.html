@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Informações</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Perfil do Usuário</h1>
+    </header>
+
+    <section class="user-info">
+        <div class="profile">
+            <div class="profile-image">
+                <img src="https://img.freepik.com/fotos-gratis/uma-imagem-colorida-de-uma-flor-com-um-fundo-preto_1340-32623.jpg"
+                    alt="Imagem de Perfil">
+            </div>
+            <br />
+            <div class="info" id="info">
+                <br>
+            </div>
+        </div>
+
+        <button id="updateButton">Atualizar Informações</button>
+    </section>
+
+    <section class="update-form" id="updateFormSection" style="display: none;">
+        <h2>Atualizar Informações</h2>
+        <form id="update-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua" required>
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+            <label for="biografia">Biografia:</label>
+            <textarea id="biografia" name="biografia" rows="4" required></textarea>
+            <button type="submit" id="atualizar">Atualizar</button>
+        </form>
+    </section>
+
+</body>
+
+<script src="botao.js"></script>
+<script src="get-informacoes.js"></script>
+<script src="put-informacoes.js"></script>
+
+</html>
