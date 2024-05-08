@@ -15,11 +15,12 @@
         <h1>Perfil do Usuário</h1>
     </header>
 
+    <img src="" alt="">
+
     <section class="user-info">
         <div class="profile">
-            <div class="profile-image">
-                <img src="https://img.freepik.com/fotos-gratis/uma-imagem-colorida-de-uma-flor-com-um-fundo-preto_1340-32623.jpg"
-                    alt="Imagem de Perfil">
+            <div class="profile-image" id="profile-image">
+
             </div>
             <br />
             <div class="info" id="info">
@@ -32,7 +33,8 @@
 
     <section class="update-form" id="updateFormSection" style="display: none;">
         <h2>Atualizar Informações</h2>
-        <form id="update-form">
+        <form id="update-form" action="/" enctype="multipart/form-data">
+
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
             <label for="idade">Idade:</label>
@@ -41,10 +43,14 @@
             <input type="text" id="rua" name="rua" required>
             <label for="bairro">Bairro:</label>
             <input type="text" id="bairro" name="bairro" required>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
             <label for="estado">Estado:</label>
             <input type="text" id="estado" name="estado" required>
             <label for="biografia">Biografia:</label>
             <textarea id="biografia" name="biografia" rows="4" required></textarea>
+            <label for="imagem">Imagem:</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*">
             <button type="submit" id="atualizar">Atualizar</button>
         </form>
     </section>
