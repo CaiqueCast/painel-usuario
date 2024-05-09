@@ -12,5 +12,5 @@ app.use(express.json());
 app.use(cors());
 app.use(routes);
 
-const porta = process.env.PORT || 3000
+const porta = process.env.PORT
 app.listen(porta);
