@@ -30,9 +30,6 @@ header {
 }
 
 .profile {
-
-
-
     display: flex;
     margin: 20px;
 }
@@ -119,8 +116,8 @@ button {
     .info {
         text-align: justify;
         margin-bottom: 10px;
-        max-width: calc(100% - 40px);
-        margin-left: 20px;
-        margin-right: 20px;
+        max-width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
