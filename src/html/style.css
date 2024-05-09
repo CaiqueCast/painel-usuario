@@ -25,17 +25,19 @@ header {
 }
 
 .user-info {
-    max-width: 800px;
+    /* max-width: 800px; */
     text-align: center;
 }
 
 .profile {
 
-    word-wrap: break-word;
+
 
     display: flex;
     margin: 20px;
 }
+
+
 
 .profile-image img {
     width: 200px;
@@ -46,7 +48,8 @@ header {
 }
 
 .info {
-    max-width: 500px;
+    word-wrap: break-word;
+    max-width: 600px;
     width: 150px;
     text-align: left;
     flex: 1;
