@@ -3,7 +3,7 @@ const divImagem = document.getElementById('profile-image')
 
 async function consultarDados (){
     try {
-        const retorno = await fetch('http://localhost:3000/usuario')
+        const retorno = await fetch('https://painel-usuario.onrender.com/usuario')
         const dados = await retorno.json();
         mostarDados(dados)
     } catch (erro) {

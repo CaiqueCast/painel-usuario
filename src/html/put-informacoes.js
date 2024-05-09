@@ -53,7 +53,7 @@ function obterDados() {
 
 async function enviarDados(formData) {
     try {
-        const resposta = await fetch('http://localhost:3000/usuario', {
+        const resposta = await fetch('https://painel-usuario.onrender.com/usuario', {
             method: 'PUT',
             body: formData
         });
