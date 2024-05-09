@@ -114,6 +114,7 @@ button {
     }
 
     .info {
+        max-width: 600px;
         text-align: justify;
     }
 }
