@@ -3,7 +3,7 @@ const btn = document.getElementById('atualizar');
 btn.addEventListener('click', async () => {
     const dados = obterDados();
     await enviarDados(dados);
-    window.location.href = 'http://localhost:3000/';
+    window.location.href = 'https://painel-usuario.onrender.com/';
 
 });
 
