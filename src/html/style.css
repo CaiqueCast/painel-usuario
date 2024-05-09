@@ -49,7 +49,7 @@ header {
 
 .info {
     word-wrap: break-word;
-    max-width: 600px;
+    max-width: 1200px;
     width: 150px;
     text-align: left;
     flex: 1;
