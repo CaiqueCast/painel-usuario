@@ -1,12 +1,29 @@
 const knex = require("../connection");
 const { uploadFile, excluirArquivo } = require("../services/storage");
 
-const updateInformation = async (req, res) => {
+const atualizarInformacoes = async (req, res) => {
   const { nome, idade, rua, bairro, cidade, estado, biografia } = req.body;
   try {
 
-    const newInformations = await knex("usuarios").update(
-      { nome, idade, rua, bairro, cidade, estado, biografia},
+    const dados = async (dado, nome) => {
+      const informacoes = await knex("usuarios").select(nome);
+      if(dado != ""){
+        return dado
+        
+      };
+         dado = await informacoes[0][nome]
+      return dado
+    }
+
+    const novasInformacoes = await knex("usuarios").update(
+      { nome: await dados(nome, 'nome'), 
+        idade: await dados(idade, 'idade'), 
+        rua: await dados(rua, 'rua'), 
+        bairro: await dados(bairro, 'bairro'), 
+        cidade: await dados(cidade, 'cidade'), 
+        estado: await dados(estado, 'estado'), 
+        biografia: await dados(biografia, 'biografia')
+      },
       "*"
     );
 
@@ -36,7 +53,7 @@ const updateInformation = async (req, res) => {
     }
 
 
-    if (newInformations.length > 0) {
+    if (novasInformacoes.length > 0) {
       return res.status(200).json("Dados atualizados com sucesso.");
     }
   } catch (error) {
@@ -45,11 +62,11 @@ const updateInformation = async (req, res) => {
   }
 };
 
-const getInformation = async (req, res) => {
+const obterInformacoes = async (req, res) => {
   try {
-    const informations = await knex("usuarios");
-    if (informations.length > 0) {
-      return res.status(200).json(informations);
+    const informacoes = await knex("usuarios");
+    if (informacoes.length > 0) {
+      return res.status(200).json(informacoes);
     }
 
   } catch (error) {
@@ -58,4 +75,4 @@ const getInformation = async (req, res) => {
   }
 };
 
-module.exports = { updateInformation, getInformation };
+module.exports = { atualizarInformacoes, obterInformacoes };

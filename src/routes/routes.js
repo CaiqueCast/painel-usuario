@@ -1,13 +1,13 @@
 const express = require("express");
 const path = require('path');
 
-const { getInformation, updateInformation } = require("../controllers/user");
+const { atualizarInformacoes, obterInformacoes } = require("../controllers/user");
 const multer = require("../services/multer");
 
 const routes = express();
 
-routes.get('/usuario', getInformation);
-routes.put('/usuario', multer.single('imagem'), updateInformation);
+routes.get('/usuario', obterInformacoes);
+routes.put('/usuario', multer.single('imagem'), atualizarInformacoes);
 routes.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'../html/index.html'));
 });

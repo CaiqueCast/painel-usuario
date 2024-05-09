@@ -3,11 +3,29 @@ const btn = document.getElementById('atualizar');
 btn.addEventListener('click', async () => {
     const dados = obterDados();
     await enviarDados(dados);
+    window.location.href = 'http://localhost:3000/';
 
-    setTimeout(() => {
-        window.location.reload();
-    }, 2500);
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoloading = document.getElementById("atualizar");
+    const loading = document.getElementById("loading");
+    const updateFormSection = document.getElementById("updateFormSection");
+
+    botaoloading.addEventListener("click", function () {
+        botaoloading.style.display = "none";
+        loading.style.display = "inline-block";
+        
+        setTimeout(function () {
+            loading.style.display = "none";
+            botaoloading.style.display = "inline-block";
+            updateFormSection.style.display = "block";
+        }, 2000); 
+    });
+});
+
+
 
 function obterDados() {
     const inputNome = document.getElementById('nome');
@@ -19,6 +37,7 @@ function obterDados() {
     const inputBiografia = document.getElementById('biografia');
     const inputImagem = document.getElementById('imagem').files[0]; 
 
+   
     const formData = new FormData();
     formData.append('nome', inputNome.value);
     formData.append('idade', inputIdade.value);

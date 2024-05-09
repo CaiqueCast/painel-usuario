@@ -7,6 +7,8 @@
     <title>Painel de Informações</title>
     <link rel="stylesheet" href="style.css">
 
+
+
 </head>
 
 <body>
@@ -35,23 +37,27 @@
         <h2>Atualizar Informações</h2>
         <form id="update-form" action="/" enctype="multipart/form-data">
 
-            <label for="nome">Nome:</label>
+            <label for="nome">Nome: <span class="required">*</span></label>
             <input type="text" id="nome" name="nome" required>
-            <label for="idade">Idade:</label>
+            <label for="idade">Idade: <span class="required">*</span></label>
             <input type="number" id="idade" name="idade" required>
-            <label for="rua">Rua:</label>
+            <label for="rua">Rua: <span class="required">*</span></label>
             <input type="text" id="rua" name="rua" required>
-            <label for="bairro">Bairro:</label>
+            <label for="bairro">Bairro: <span class="required">*</span></label>
             <input type="text" id="bairro" name="bairro" required>
-            <label for="cidade">Cidade:</label>
+            <label for="cidade">Cidade: <span class="required">*</span></label>
             <input type="text" id="cidade" name="cidade" required>
-            <label for="estado">Estado:</label>
+            <label for="estado">Estado: <span class="required">*</span></label>
             <input type="text" id="estado" name="estado" required>
-            <label for="biografia">Biografia:</label>
+            <label for="biografia">Biografia: <span class="required">*</span></label>
             <textarea id="biografia" name="biografia" rows="4" required></textarea>
-            <label for="imagem">Imagem:</label>
+            <label for="imagem">Imagem: </label>
             <input type="file" id="imagem" name="imagem" accept="image/*">
-            <button type="submit" id="atualizar">Atualizar</button>
+
+            <span class="loading" id="loading"></span>
+
+
+            <button type="button" id="atualizar">Atualizar</button>
         </form>
     </section>
 
@@ -60,5 +66,7 @@
 <script src="botao.js"></script>
 <script src="get-informacoes.js"></script>
 <script src="put-informacoes.js"></script>
+
+
 
 </html>
