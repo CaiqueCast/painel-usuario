@@ -25,7 +25,7 @@ header {
 }
 
 .user-info {
-    max-width: 600px;
+    max-width: 700px;
     text-align: center;
 }
 
@@ -46,8 +46,8 @@ header {
 
 .info {
     word-wrap: break-word;
-    max-width: 600px;
-    width: 600px;
+    max-width: 900px;
+    width: 900px;
     text-align: left;
     flex: 1;
 }
